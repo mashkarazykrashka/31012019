@@ -13,7 +13,7 @@
 <?php
 $new = array(2,8,14,22,7,111,97,15,72,6);
 
-function reverse($arr) 
+function my_reverse($arr) 
 {
 	for ($i=0; $i<count($arr); $i++) 
 		{
@@ -26,7 +26,7 @@ $time_start = microtime(1);
 
 for ($f=1; $f<=10000; $f++)
 	{
-		reverse($new);
+		my_reverse($new);
 	}
 
 $time_end = microtime (1);
@@ -46,7 +46,7 @@ for ($f=1; $f<=10000; $f++)
 $time_end = microtime (1);
 $time2 = $time_end - $time_start;
 
-echo "Возвращение массива в обратном порядке с помощью встроенной функции array_reverse, выполненная 10000 раз занимает $time2 секунд.\n";
+echo "Возвращение массива в обратном порядке с помощью встроенной функции in_array, выполненная 10000 раз занимает $time2 секунд.\n";
 echo "<br>";
 
 $rez=round($time1/$time2, 0);
